@@ -11,8 +11,8 @@ namespace ShoppingApp.WebApi.Filter
         public override void OnActionExecuting(ActionExecutingContext context)
         {
             var now = DateTime.Now.TimeOfDay;
-            StartTime = "23.00";
-            EndTime = "23.59";
+            StartTime = "23:00";
+            EndTime = "23:59";
 
             if (now >= TimeSpan.Parse(StartTime) && now <= TimeSpan.Parse(EndTime))
             {

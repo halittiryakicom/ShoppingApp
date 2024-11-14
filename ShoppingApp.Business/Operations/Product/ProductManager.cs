@@ -151,7 +151,7 @@ namespace ShoppingApp.Business.Operations.Product
                     Orders = x.Orders.Select(
                         f => new OrderProductDto
                         {
-                            OrderId = f.Id,
+                            OrderId = f.OrderId,
                             ProductId = f.ProductId,
                             Quantity = f.Quantity,
                         }).ToList()

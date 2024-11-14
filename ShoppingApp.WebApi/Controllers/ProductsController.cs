@@ -94,6 +94,7 @@ namespace ShoppingApp.WebApi.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize(Roles ="Admin")]
         [TimeControlFilter]
         public async Task<IActionResult> UpdateProduct(int id, UpdateProductRequest request)
         {
